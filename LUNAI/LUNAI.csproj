@@ -8,8 +8,15 @@
         <RootNamespace>LUNAI</RootNamespace>
     </PropertyGroup>
 
+    <!-- This is a shared UI library: the Android SDK adds Android.* usings that clash with
+         Avalonia / System names (Application, Environment, ...). Keep them out. -->
     <ItemGroup>
-        <AvaloniaResource Include="Assets\**\*" />
+        <Using Remove="Android.App" />
+        <Using Remove="Android.Content" />
+        <Using Remove="Android.OS" />
+        <Using Remove="Android.Runtime" />
+        <Using Remove="Android.Views" />
+        <Using Remove="Android.Widget" />
     </ItemGroup>
 
     <ItemGroup>
@@ -17,7 +24,6 @@
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.0" />
         <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.0" />
         <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.0" />
-        <PackageReference Include="Avalonia.Svg.Skia" Version="11.3.0" />
         <PackageReference Include="ReactiveUI" Version="20.1.1" />
     </ItemGroup>
 </Project>

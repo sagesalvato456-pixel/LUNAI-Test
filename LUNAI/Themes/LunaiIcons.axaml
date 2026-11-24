@@ -1,0 +1,166 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- LUNAI moon (crescent + stars) -->
+    <DrawingImage x:Key="Icon.LunaiMoon">
+        <DrawingGroup>
+            <GeometryDrawing Brush="#A78BDD">
+                <GeometryDrawing.Geometry>
+                    <CombinedGeometry GeometryCombineMode="Exclude">
+                        <CombinedGeometry.Geometry1>
+                            <EllipseGeometry Center="20,20" RadiusX="13" RadiusY="13" />
+                        </CombinedGeometry.Geometry1>
+                        <CombinedGeometry.Geometry2>
+                            <EllipseGeometry Center="26,16" RadiusX="10" RadiusY="10" />
+                        </CombinedGeometry.Geometry2>
+                    </CombinedGeometry>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#E8E0FF">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="36,10" RadiusX="2" RadiusY="2" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#B3E8E0FF">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="40,18" RadiusX="1.3" RadiusY="1.3" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#80E8E0FF">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="34,22" RadiusX="1" RadiusY="1" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingImage>
+
+    <!-- OpenUTAU: waveform bars -->
+    <DrawingImage x:Key="Icon.OpenUtau">
+        <DrawingGroup>
+            <GeometryDrawing Brush="#1565C0">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="0,0,64,64" RadiusX="14" RadiusY="14" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#90CAF9">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="8,28,6,8" RadiusX="3" RadiusY="3" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#90CAF9">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="17,20,6,24" RadiusX="3" RadiusY="3" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#FFFFFF">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="26,24,6,16" RadiusX="3" RadiusY="3" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#90CAF9">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="35,16,6,32" RadiusX="3" RadiusY="3" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#90CAF9">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="44,22,6,20" RadiusX="3" RadiusY="3" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#E3F2FD">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="53,14" RadiusX="4" RadiusY="4" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingImage>
+
+    <!-- OpenLoid: flame -->
+    <DrawingImage x:Key="Icon.OpenLoid">
+        <DrawingGroup>
+            <GeometryDrawing Brush="#6A1B9A">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="0,0,64,64" RadiusX="14" RadiusY="14" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#80CE93D8"
+                             Geometry="M32,10 C32,10 20,24 20,36 C20,44 25,50 32,52 C39,50 44,44 44,36 C44,24 32,10 32,10 Z" />
+            <GeometryDrawing Brush="#E1BEE7"
+                             Geometry="M32,22 C32,22 24,32 24,40 C24,46 27.5,50 32,52 C36.5,50 40,46 40,40 C40,32 32,22 32,22 Z" />
+            <GeometryDrawing Brush="#E6FFFFFF">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="32,43" RadiusX="6" RadiusY="8" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingImage>
+
+    <!-- OpenSV: sine waves -->
+    <DrawingImage x:Key="Icon.OpenSV">
+        <DrawingGroup>
+            <GeometryDrawing Brush="#00695C">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="0,0,64,64" RadiusX="14" RadiusY="14" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Geometry="M6,32 Q14,14 22,32 Q30,50 38,32 Q46,14 54,32 Q58,41 62,32">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#80CBC4" Thickness="4" LineCap="Round" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+            <GeometryDrawing Geometry="M6,38 Q14,20 22,38 Q30,56 38,38 Q46,20 54,38">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#99E0F2F1" Thickness="2.5" LineCap="Round" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#B2DFDB">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="54,12" RadiusX="5" RadiusY="5" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingImage>
+
+    <!-- OpenSona: rings (coming soon) -->
+    <DrawingImage x:Key="Icon.OpenSona">
+        <DrawingGroup>
+            <GeometryDrawing Brush="#E65100">
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="0,0,64,64" RadiusX="14" RadiusY="14" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FFCC80" Thickness="3" />
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="32,32" RadiusX="20" RadiusY="20" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FFE0B2" Thickness="2" />
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="32,32" RadiusX="12" RadiusY="12" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Brush="#E6FFFFFF">
+                <GeometryDrawing.Geometry>
+                    <EllipseGeometry Center="32,32" RadiusX="5" RadiusY="5" />
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+            <GeometryDrawing Geometry="M46,10 L54,18">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF6D00" Thickness="3" LineCap="Round" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+            <GeometryDrawing Geometry="M54,10 L46,18">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF6D00" Thickness="3" LineCap="Round" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingImage>
+
+</ResourceDictionary>

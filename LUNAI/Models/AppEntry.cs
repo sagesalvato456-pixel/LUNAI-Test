@@ -28,7 +28,7 @@ public sealed record AppEntry(
     string      Description,
     string      AccentKey,       // resource key e.g. "App.OpenUtau.AccentBrush"
     string      PackageName,     // android package id used to check installation
-    string      IconAsset,       // avares:// uri to SVG icon
+    string      IconAsset,       // resource key of a DrawingImage in Themes/LunaiIcons.axaml
     string?     DownloadUrl,     // null = coming soon
     string?     LatestVersion
 );

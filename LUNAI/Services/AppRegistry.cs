@@ -13,7 +13,7 @@ public static class AppRegistry
             Description:   "Open-source UTAU engine for Android.",
             AccentKey:     "App.OpenUtau.AccentBrush",
             PackageName:   "com.openutau.mobile",
-            IconAsset:     "avares://LUNAI/Assets/Icons/icon_openutau.svg",
+            IconAsset:     "Icon.OpenUtau",
             DownloadUrl:   null,          // FILL: GitHub releases URL when ready
             LatestVersion: null
         ),
@@ -24,7 +24,7 @@ public static class AppRegistry
             Description:   "VOCALOID V6 / V7 engine for Android.",
             AccentKey:     "App.OpenLoid.AccentBrush",
             PackageName:   "com.openloid.flame",
-            IconAsset:     "avares://LUNAI/Assets/Icons/icon_openloid.svg",
+            IconAsset:     "Icon.OpenLoid",
             DownloadUrl:   null,          // FILL: GitHub releases URL when ready
             LatestVersion: null
         ),
@@ -35,7 +35,7 @@ public static class AppRegistry
             Description:   "OpenSV+ neural synthesis engine for Android.",
             AccentKey:     "App.OpenSV.AccentBrush",
             PackageName:   "com.opensv.flat",
-            IconAsset:     "avares://LUNAI/Assets/Icons/icon_opensv.svg",
+            IconAsset:     "Icon.OpenSV",
             DownloadUrl:   null,          // FILL: GitHub releases URL when ready
             LatestVersion: null
         ),
@@ -46,7 +46,7 @@ public static class AppRegistry
             Description:   "Coming soon.",
             AccentKey:     "App.OpenSona.AccentBrush",
             PackageName:   "com.opensona.aether",
-            IconAsset:     "avares://LUNAI/Assets/Icons/icon_opensona.svg",
+            IconAsset:     "Icon.OpenSona",
             DownloadUrl:   null,
             LatestVersion: null
         ),

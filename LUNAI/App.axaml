@@ -6,6 +6,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceInclude Source="avares://LUNAI/Themes/LunaiColors.axaml" />
+                <ResourceInclude Source="avares://LUNAI/Themes/LunaiIcons.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

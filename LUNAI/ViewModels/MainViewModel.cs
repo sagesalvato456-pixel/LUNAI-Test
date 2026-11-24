@@ -13,6 +13,7 @@ public sealed class AppCardViewModel : ReactiveObject
 
     public AppEntry Entry { get; }
     public IBrush AccentBrush { get; }
+    public IImage? Icon { get; }
 
     private InstallState _state;
     public  InstallState  State
@@ -41,7 +42,8 @@ public sealed class AppCardViewModel : ReactiveObject
     {
         Entry       = entry;
         _store      = store;
-        AccentBrush = AccentBrushes.Resolve(entry.AccentKey);
+        AccentBrush = ResourceLookup.Brush(entry.AccentKey);
+        Icon        = ResourceLookup.Find<IImage>(entry.IconAsset);
         _state      = ComputeState();
 
         var canRun = this.WhenAnyValue(x => x.State,

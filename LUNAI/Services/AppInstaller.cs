@@ -36,7 +36,7 @@ public sealed class AppInstaller
         if (app.DownloadUrl is null) return false;
 
         string cacheDir = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData),
             "LUNAI", "cache");
         Directory.CreateDirectory(cacheDir);
 

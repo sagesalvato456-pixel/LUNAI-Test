@@ -15,7 +15,7 @@ public sealed class InstalledAppRecord
 public sealed class InstallStateStore
 {
     private static readonly string FilePath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+        System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData),
         "LUNAI", "install_state.json");
 
     private readonly Dictionary<string, InstalledAppRecord> _records = new();

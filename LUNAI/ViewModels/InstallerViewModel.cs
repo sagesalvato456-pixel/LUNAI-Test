@@ -81,7 +81,7 @@ public sealed class InstallerViewModel : ReactiveObject
     {
         _app        = app;
         _installer  = installer;
-        AccentBrush = AccentBrushes.Resolve(app.AccentKey);
+        AccentBrush = ResourceLookup.Brush(app.AccentKey);
 
         var canNext = this.WhenAnyValue(
             x => x.Step,
