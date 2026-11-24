@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-    <files-path name="lunai_cache" path="LUNAI/cache/" />
-    <external-files-path name="lunai_cache_ext" path="LUNAI/cache/" />
+    <files-path name="lunai_files" path="." />
+    <external-files-path name="lunai_ext" path="." />
 </paths>

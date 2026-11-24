@@ -2,8 +2,10 @@ using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Android;
+using Avalonia.ReactiveUI;
 using LUNAI.Services;
 
 namespace LUNAI.Android;
@@ -29,7 +31,7 @@ public class MainActivity : AvaloniaMainActivity<App>
     protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
         => base.CustomizeAppBuilder(builder)
                .WithInterFont()
-               .UseSkia()
+               .UseReactiveUI()
                .With(new SkiaOptions { MaxGpuResourceSizeBytes = 256 * 1024 * 1024 });
 
     // ── Android install intent ────────────────────────────────────

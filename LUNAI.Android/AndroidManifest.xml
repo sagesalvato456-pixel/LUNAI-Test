@@ -14,7 +14,7 @@
         <!-- FileProvider for APK sharing to system installer -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.provider"
+            android:authorities="com.lunai.project.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

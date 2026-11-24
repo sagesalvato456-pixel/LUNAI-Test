@@ -4,6 +4,7 @@
         <TargetFramework>net10.0-android36.0</TargetFramework>
         <SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
         <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
         <ApplicationTitle>LUNAI</ApplicationTitle>
         <ApplicationId>com.lunai.project</ApplicationId>
         <ApplicationVersion>1</ApplicationVersion>
