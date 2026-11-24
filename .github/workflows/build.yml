@@ -2,9 +2,9 @@ name: Build LUNAI
 
 on:
   push:
-    branches: [Dev]
+    branches: [Dev, main]
   pull_request:
-    branches: [Dev]
+    branches: [Dev, main]
   workflow_dispatch:
 
 jobs:
