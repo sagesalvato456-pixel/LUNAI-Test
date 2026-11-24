@@ -3,7 +3,6 @@ using System.Reactive;
 using LUNAI.Models;
 using LUNAI.Services;
 using ReactiveUI;
-using static LUNAI.Services.AppLauncher;
 
 namespace LUNAI.ViewModels;
 
