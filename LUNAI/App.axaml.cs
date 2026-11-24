@@ -1,14 +1,13 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Avalonia.Svg.Skia;
 using LUNAI.Services;
 using LUNAI.ViewModels;
 using LUNAI.Views;
 
 namespace LUNAI;
 
-public class App : Application
+public class App : Avalonia.Application
 {
     public override void Initialize()
     {
