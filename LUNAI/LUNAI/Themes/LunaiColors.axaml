@@ -1,0 +1,47 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ── LUNAI Core Palette ───────────────────────────────────── -->
+    <!-- Pulled from the logo: deep purple bg, lavender moon, white stars -->
+
+    <Color x:Key="Lunai.Background">#0A0010</Color>
+    <Color x:Key="Lunai.Surface">#1A0A2E</Color>
+    <Color x:Key="Lunai.SurfaceHigh">#251540</Color>
+    <Color x:Key="Lunai.Primary">#7B5EAE</Color>
+    <Color x:Key="Lunai.PrimaryLight">#A78BDD</Color>
+    <Color x:Key="Lunai.OnPrimary">#FFFFFF</Color>
+    <Color x:Key="Lunai.Accent">#E8E0FF</Color>
+    <Color x:Key="Lunai.GradientTop">#4A1A7A</Color>
+    <Color x:Key="Lunai.GradientBot">#000000</Color>
+    <Color x:Key="Lunai.TextPrimary">#F0EAFF</Color>
+    <Color x:Key="Lunai.TextSecondary">#9A88BB</Color>
+    <Color x:Key="Lunai.Divider">#2E1F4A</Color>
+    <Color x:Key="Lunai.Success">#4CAF50</Color>
+    <Color x:Key="Lunai.Error">#CF6679</Color>
+    <Color x:Key="Lunai.Warning">#FFB74D</Color>
+
+    <!-- ── App Accent Colors ─────────────────────────────────────── -->
+    <Color x:Key="App.OpenUtau.Accent">#2196F3</Color>
+    <Color x:Key="App.OpenLoid.Accent">#9B59B6</Color>
+    <Color x:Key="App.OpenSV.Accent">#26A69A</Color>
+    <Color x:Key="App.OpenSona.Accent">#FF6D00</Color>
+
+    <!-- ── Brushes ───────────────────────────────────────────────── -->
+    <SolidColorBrush x:Key="Lunai.BackgroundBrush" Color="{StaticResource Lunai.Background}" />
+    <SolidColorBrush x:Key="Lunai.SurfaceBrush" Color="{StaticResource Lunai.Surface}" />
+    <SolidColorBrush x:Key="Lunai.SurfaceHighBrush" Color="{StaticResource Lunai.SurfaceHigh}" />
+    <SolidColorBrush x:Key="Lunai.PrimaryBrush" Color="{StaticResource Lunai.Primary}" />
+    <SolidColorBrush x:Key="Lunai.PrimaryLightBrush" Color="{StaticResource Lunai.PrimaryLight}" />
+    <SolidColorBrush x:Key="Lunai.AccentBrush" Color="{StaticResource Lunai.Accent}" />
+    <SolidColorBrush x:Key="Lunai.TextPrimaryBrush" Color="{StaticResource Lunai.TextPrimary}" />
+    <SolidColorBrush x:Key="Lunai.TextSecondaryBrush" Color="{StaticResource Lunai.TextSecondary}" />
+    <SolidColorBrush x:Key="Lunai.DividerBrush" Color="{StaticResource Lunai.Divider}" />
+    <SolidColorBrush x:Key="Lunai.SuccessBrush" Color="{StaticResource Lunai.Success}" />
+    <SolidColorBrush x:Key="Lunai.ErrorBrush" Color="{StaticResource Lunai.Error}" />
+
+    <SolidColorBrush x:Key="App.OpenUtau.AccentBrush" Color="{StaticResource App.OpenUtau.Accent}" />
+    <SolidColorBrush x:Key="App.OpenLoid.AccentBrush" Color="{StaticResource App.OpenLoid.Accent}" />
+    <SolidColorBrush x:Key="App.OpenSV.AccentBrush" Color="{StaticResource App.OpenSV.Accent}" />
+    <SolidColorBrush x:Key="App.OpenSona.AccentBrush" Color="{StaticResource App.OpenSona.Accent}" />
+
+</ResourceDictionary>

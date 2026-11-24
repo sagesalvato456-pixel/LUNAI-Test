@@ -1,0 +1,128 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:LUNAI.ViewModels"
+             xmlns:installer="clr-namespace:LUNAI.Controls.Installer"
+             xmlns:svg="clr-namespace:Avalonia.Svg.Skia;assembly=Avalonia.Svg.Skia"
+             x:Class="LUNAI.Views.MainView"
+             x:DataType="vm:MainViewModel"
+             Background="{StaticResource Lunai.BackgroundBrush}">
+
+    <Panel>
+
+        <!-- ── Launcher home ───────────────────────────────────── -->
+        <Grid RowDefinitions="Auto,*">
+
+            <!-- Header -->
+            <Border Grid.Row="0" Padding="20,16"
+                    Background="{StaticResource Lunai.SurfaceBrush}">
+                <Grid ColumnDefinitions="*,Auto">
+                    <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                        <svg:Svg Path="avares://LUNAI/Assets/lunai_wordmark.svg"
+                                 Height="32" Stretch="Uniform" />
+                        <TextBlock Text="PROJECT"
+                                   FontSize="10" FontWeight="Light" LetterSpacing="3"
+                                   Foreground="{StaticResource Lunai.TextSecondaryBrush}"
+                                   VerticalAlignment="Center" Margin="0,6,0,0" />
+                    </StackPanel>
+                    <TextBlock Grid.Column="1"
+                               Text="Choose your vocal synthesis environment."
+                               FontSize="11"
+                               Foreground="{StaticResource Lunai.TextSecondaryBrush}"
+                               VerticalAlignment="Center"
+                               MaxWidth="180" TextWrapping="Wrap" TextAlignment="Right" />
+                </Grid>
+            </Border>
+
+            <!-- App card grid -->
+            <ScrollViewer Grid.Row="1">
+                <ItemsControl ItemsSource="{Binding Cards}" Margin="12">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:AppCardViewModel">
+                            <Border Width="160" Margin="8"
+                                    Background="{StaticResource Lunai.SurfaceBrush}"
+                                    CornerRadius="12"
+                                    Padding="0,0,0,0">
+                                <Grid RowDefinitions="6,*,Auto">
+
+                                    <!-- Accent strip top -->
+                                    <Border Grid.Row="0" CornerRadius="12,12,0,0"
+                                            Background="{Binding AccentBrush}" />
+
+                                    <!-- App info -->
+                                    <StackPanel Grid.Row="1" Spacing="4" Margin="14,12">
+                                        <!-- Icon -->
+                                        <svg:Svg Path="{Binding Entry.IconAsset}"
+                                                 Width="40" Height="40"
+                                                 Stretch="Uniform"
+                                                 HorizontalAlignment="Left"
+                                                 Margin="0,0,0,4" />
+                                        <TextBlock Text="{Binding Entry.DisplayName}"
+                                                   FontSize="14" FontWeight="SemiBold"
+                                                   Foreground="{StaticResource Lunai.TextPrimaryBrush}"
+                                                   TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding Entry.Ecosystem}"
+                                                   FontSize="11"
+                                                   Foreground="{StaticResource Lunai.TextSecondaryBrush}" />
+
+                                        <!-- Version row -->
+                                        <Grid ColumnDefinitions="*,*" Margin="0,6,0,0">
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="Installed"
+                                                           FontSize="9"
+                                                           Foreground="{StaticResource Lunai.TextSecondaryBrush}" />
+                                                <TextBlock Text="{Binding InstalledVersion}"
+                                                           FontSize="11"
+                                                           Foreground="{StaticResource Lunai.TextPrimaryBrush}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1">
+                                                <TextBlock Text="Latest"
+                                                           FontSize="9"
+                                                           Foreground="{StaticResource Lunai.TextSecondaryBrush}" />
+                                                <TextBlock Text="{Binding LatestVersion}"
+                                                           FontSize="11"
+                                                           Foreground="{StaticResource Lunai.TextPrimaryBrush}" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </StackPanel>
+
+                                    <!-- Action button -->
+                                    <Button Grid.Row="2"
+                                            Command="{Binding PrimaryActionCommand}"
+                                            HorizontalAlignment="Stretch"
+                                            HorizontalContentAlignment="Center"
+                                            CornerRadius="0,0,12,12"
+                                            Padding="0,10"
+                                            Background="{Binding AccentBrush}">
+                                        <TextBlock Foreground="White" FontSize="13" FontWeight="SemiBold"
+                                                   Text="{Binding State, Converter={x:Static vm:InstallStateToLabelConverter.Instance}}" />
+                                    </Button>
+
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </Grid>
+
+        <!-- ── Installer overlay ───────────────────────────────── -->
+        <Panel IsVisible="{Binding InstallerOpen}"
+               Background="#CC000000">
+            <Border Background="{StaticResource Lunai.SurfaceBrush}"
+                    CornerRadius="16"
+                    Margin="16"
+                    VerticalAlignment="Center"
+                    MaxHeight="560">
+                <installer:InstallerWizard DataContext="{Binding ActiveInstaller}" />
+            </Border>
+        </Panel>
+
+    </Panel>
+
+</UserControl>
