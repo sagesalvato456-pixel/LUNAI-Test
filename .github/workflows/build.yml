@@ -1,0 +1,40 @@
+name: Build LUNAI
+
+on:
+  push:
+    branches: [Dev]
+  pull_request:
+    branches: [Dev]
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install Android workload
+        run: dotnet workload install android
+
+      - name: Restore
+        run: dotnet restore LUNAI.sln
+
+      - name: Build APK
+        run: |
+          dotnet publish LUNAI.Android/LUNAI.Android.csproj \
+            -f net10.0-android36.0 \
+            -c Release \
+            -o artifacts/
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LUNAI-APK
+          path: artifacts/*.apk
+          retention-days: 30

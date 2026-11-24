@@ -1,0 +1,28 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="Button">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <DoubleTransition Property="Opacity" Duration="0:0:0.15" />
+            </Transitions>
+        </Setter>
+    </Style>
+    <Style Selector="Button:pointerover /template/ ContentPresenter">
+        <Setter Property="Opacity" Value="0.85" />
+    </Style>
+    <Style Selector="Button:pressed /template/ ContentPresenter">
+        <Setter Property="Opacity" Value="0.65" />
+    </Style>
+    <Style Selector="CheckBox">
+        <Setter Property="Foreground" Value="{StaticResource Lunai.TextPrimaryBrush}" />
+    </Style>
+    <Style Selector="ScrollViewer">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="ProgressBar">
+        <Setter Property="Background" Value="{StaticResource Lunai.SurfaceHighBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource Lunai.PrimaryBrush}" />
+    </Style>
+</ResourceDictionary>
